@@ -1,0 +1,330 @@
+/* Código geral, que será herdado por qualquer dispositivos.
+nesse caso, seria o código usado no desktop, na maioria das   vezes.
+Se você já conhecer a ideia do Mobile First, esse primeiro código será destinado para mobiles.
+*/
+
+:root {
+    --cor: #165659;
+    --cor-font: #fff;
+    --cor-linha: #1e999d;
+    --cor-sep: #1e999d;
+    --logo: url(https://cdn.sibbr.gov.br/img/logo-w.svg) no-repeat left bottom;
+    --logo-semtexto: url(https://cdn.sibbr.gov.br/img/logo-w-semtexto.svg) no-repeat left bottom;
+}
+
+
+body{
+	background: rgb(22, 130, 119);
+	margin-bottom: auto;
+	font-family: 'Open Sans';
+}
+
+.center{
+	margin: 0 auto;
+	display: table;
+}
+
+h2{
+	font-family: 'lato';
+	font-weight: 400;
+	font-size: 20px;
+	color: #0d4f52;
+	font-style: italic;
+	border-bottom: 2px dotted #bdbfc1;
+	padding-bottom: 8px;
+}
+
+h2.title-project{
+	font-family: 'lato';
+	font-weight: 400;
+	font-size: 18px;
+	color: #0d4f52 ;
+	font-style: italic;
+
+}
+
+.panel-default p, .panel-default ol, .panel-default ul{
+	padding: 10px;
+}
+
+.panel-default > .panel-heading{
+	background-color: #167c82;
+	color: #fff;
+	border-bottom: 0.1em dotted rgba(255, 255, 255, 0.50);;
+	text-align: center;
+}
+
+.panel-default{
+	background-color: #167c82;
+	border: 0;
+	color: #fff;
+}
+
+.panel-title > .small, .panel-title > .small > a, .panel-title > a, .panel-title > small, .panel-title > small > a:hover {
+	text-decoration: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 24px;
+	color: inherit;
+	font-family: 'Lato';
+	font-style: italic;
+	letter-spacing: 0px;
+}
+
+.iconograma{
+	padding: 10px;
+	padding-top: 70px;
+}
+
+
+
+label{
+	font-family: 'Raleway';
+	font-weight: 400;
+	font-size: 12px ;
+	color: #0d4f52;
+}
+
+.btn-primary{
+	font-family: 'Raleway' ;
+	font-weight: 400 ;
+	font-size: 14px ;
+	color: #fff;
+	background-color: #165659;
+	border-color: #1e6f72;
+}
+
+.btn-primary:hover{
+	background-color: #1e6f72;
+	border-color: #165659;
+}
+
+
+.homenagem{
+	display: none;
+}
+
+.content {
+	background-color: #f1f2f2;
+	padding: 5px 20px;
+	border-radius: 8px;
+	margin-top: 0px;
+}
+
+.marca-dagua-sibbr, .logo{
+	max-width: 100%;
+}
+
+.text_link{
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/*HELP BOTAO DE ACESSO AO FORUM DO SIBBR*/
+.help{
+	width: 300px;
+	position: fixed;
+	top: 200px;
+	right: -264px;
+	z-index: 99;
+}
+
+.help-open{
+	right: -100px;
+}
+
+.engloba-interrogacao{
+	position: absolute;
+	top: 17px;
+	left: -32px;
+}
+
+.bg-interrogacao{
+	background: #fff;
+	width: 60px;
+	height: 57px;
+	border: 3px solid #283535;
+	border-radius: 45px;
+	line-height: 0;
+}
+
+.bg-interrogacao span{
+	font-size: 34px;
+	padding: 23px 17px;
+	display: block;
+	font-family: 'Open Sans', sans-serif;
+	color: #135559;
+	background: #51a8b1;
+	border-radius: 45px;
+	height: 47px;
+	width: 49px;
+	margin: 2px;
+}
+
+.help-content{
+	background: #283535;
+	display: table;
+	width: 200px;
+	padding: 7px;
+	border-radius: 8px 0 0 8px;
+}
+
+.help-content span{
+	color: #fff;
+	margin: 0 auto;
+	display: table;
+	font-size: 16px;
+}
+
+.help-content .btn{
+	margin: 0 auto;
+	display: table;
+}
+
+
+.bullet-down{
+	float: right;
+	font-weight: 100;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.75);
+	top: 9px;
+}
+
+/*FOOTER*/
+.footer{
+	background: #283635;
+	position: relative;
+	display: block;
+	height: auto;
+	padding-top: 13px;
+	height: auto;
+}
+
+.footer img{
+	max-width: 100%;
+}
+
+/*FIM - FOOTER*/
+
+
+/*
+Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo.
+*/
+@media screen and (min-width: 768px) {
+	.footer{
+		position: relative;
+		display: block;
+		padding-top: 13px;
+		height: auto;
+	}
+
+	.iconograma{
+		padding-top: 125px;
+	}
+
+	.footer img{
+		max-width: 100%;
+	}
+
+}
+
+/*
+Com uma largura mínima de 992 pixels. Monitores por exemplo.
+*/
+@media screen and (min-width: 992px) {
+
+	.footer{
+		padding-top: 13px;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.content {
+		margin-top: 125px;
+	}
+
+
+
+	.iconograma{
+		padding-top: 25px;
+	}
+
+	.footer img{
+		max-width: none;
+	}
+
+	.homenagem{
+		display: table;
+		background: #283635;
+		color: #fff;
+		margin-bottom: 100px;
+		font-size: 12px;
+		border-radius: 45px 0 0 45px;
+	}
+
+	.homenagem img{
+		float: left;
+		padding: 2px;
+	}
+
+	.homenagem p{
+		font-style: italic;
+		font-size: 10px;
+		line-height: 12px;
+		display: table-cell;
+		text-align: left;
+		vertical-align: middle;
+	}
+
+
+}
+
+/*
+Dispositivos com largura mínima de 1200 pixels. Por exemplo TVs.
+*/
+@media screen and (min-width: 1200px) {
+
+	.footer{
+		padding-top: 13px;
+		position: absolute;
+		bottom: 0;
+	}
+
+	.content {
+		margin-top: 125px;
+	}
+
+
+}
+
+
+
+
+
+textarea{
+	width: 100%;
+	max-width: 100%;
+	height: 200px;
+}
+
+.btn_change {
+    border-radius: 3px;
+    display: table;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    color: #847d7d;
+    }
+
+.btn_change:hover{
+	border:1px solid #c1c1c1;
+}
+
+.gmstogd, .gdtogms{
+	font-size: 20px;
+}
+
+#clickMe{
+	float: right;
+	margin: 10px;
+}
